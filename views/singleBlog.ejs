@@ -1,0 +1,42 @@
+
+<%- include('./header') %>
+
+
+    <head>
+        <!-- <link rel="stylesheet" href="singleblog.css"> -->
+    </head>
+
+    <body>
+
+        <!-- <img src = "content[id].imageurl " alt=""> -->
+        <h1>
+            <%= blog.title %>
+        </h1>
+
+        <!-- <h3>
+             today 
+        </h3> -->
+        <p id="mytext">
+            <%= blog.content %>
+        </p>
+
+        <!-- <div class="wrap">
+            <div class="votes">
+        <%= blog.votesCount %>></div>
+            <div class="button"><i class="fa fa-arrow-up"></i>Vote</div>
+        </div> -->
+
+        <h3 id="votesCount">
+            <%= blog.votesCount %>
+        </h3>
+
+        <% if(isLoggedIn) { %>
+            <button onclick="voted()">upvote</button>
+            <% } %>
+                <input type="hidden" id="blogid" value="<%= blog._id %>">
+                <script src="/js/singleblog.js"></script>
+
+                <script src="/js/singleblog.js"></script>
+
+                <%- include('./footer') %>
+    </body>

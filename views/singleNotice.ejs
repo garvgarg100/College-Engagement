@@ -1,0 +1,29 @@
+<%- include('./header') %>
+
+
+    <head>
+        <!-- <link rel="stylesheet" href="singleblog.css"> -->
+    </head>
+
+    <body>
+
+        <img src="<%= notice.imgurl %>" alt="img">
+        <h1>
+            <%= notice.title %>
+        </h1>
+
+        <!-- <h3>
+             today 
+        </h3> -->
+        <p id="mytext">
+            <%= notice.content %>
+        </p>
+
+        <!-- <div class="wrap">
+            <div class="votes">
+        blog.votesCount ></div>
+            <div class="button"><i class="fa fa-arrow-up"></i>Vote</div>
+        </div> -->
+
+        <%- include('./footer') %>
+    </body>
